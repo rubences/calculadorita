@@ -114,3 +114,17 @@ function quitar(numeros) {
     numeros.pop();
     return numeros;
 }
+function saveResult(operation, result) {
+    fetch('/saveResult', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ operation, result }),
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
