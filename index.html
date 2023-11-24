@@ -25,7 +25,8 @@
 
         /* Estilos para el color de fondo y el color de texto */
         body {
-            background-color: camel;
+            background-image: url("https://www.youtube.com/watch?v=jh4d4Lm6JG0"); /* Enlace al video de YouTube de Shrek */
+            background-size: cover;
             color: white;
         }
 
@@ -38,6 +39,7 @@
             margin-right: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
+            border-radius: 10px; /* Hacemos los botones menos redondeados */
         }
 
         button:hover {
@@ -56,13 +58,41 @@
                 width: 150px;
             }
         }
+        #video-background {
+            position: fixed;
+            right: 0; 
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto; 
+            height: auto; 
+            z-index: -100;
+        }
+
+        #calculadora {
+            position: relative;
+            z-index: 1;
+            /* Otros estilos de la calculadora aquí */
+        }
         /* END: Estilos personalizados */
+        
+        /* BEGIN: Estilos personalizados - Fondo de color leopardo */
+        body {
+            background-image: url("https://example.com/leopard-pattern.jpg"); /* URL de la imagen de fondo de leopardo */
+            background-size: cover;
+        }
+        /* END: Estilos personalizados - Fondo de color leopardo */
     </style>
 </head>
 
 <body>
-
+    <div id="video-background">
+        <video autoplay muted loop id="video-background">
+            <source src="https://www.youtube.com/watch?v=jh4d4Lm6JG0" type="video/mp4">
+        </video>
+    </div>
     <div id="calculadora">
+
         <h1>Calculadora WEB</h1>
 
         <input type="text" id="inputNumbers" placeholder="Introduce números o realiza operaciones binarias">
